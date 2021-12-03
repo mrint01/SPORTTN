@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <title>
+            Sport TN
+        </title>
+        {% load static %}
+        <link rel="stylesheet" href="{%   static  'css/style1.css'  %}">
+        <link rel="stylesheet" href="{%   static  'css/slidebar.css'  %}">
+          
+
+<script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+{% load static %}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="{% static 'images/run.png'  %}" />
+
+<style>
+    .mySlides {
+        display: none;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    
+    
+
+  
+
+    .active {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        width: auto;
+        padding: 16px;
+        margin-top: -500px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* On smaller screens, decrease text size */
+    .slideimg {
+        width: 100%;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+        .text {
+            font-size: 11px
+        }
+       
+    
+
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+
+    
+</style>
+</head>
+<nav id="menu" style="background-image: url(../static/images/sportif.jpg) ;margin-top: -32px;height: 275px;width: 100.5%;background-size:450px">
+    <div class="menu-item-vide">
+        <div class="menu-text">
+            
+            <img style="margin-top: -14px;" width="50px" height="50px" src="{% static 'images/run.png' %}">
+        </div>
+
+    </div>
+    <div class="menu-item-vide" ">
+        <div class="menu-text">
+            <a href="{% url 'index'  %}">Acceuil</a>
+        </div>
+
+    </div>
+    <div class="menu-item">
+        <div class="menu-text">
+            <a href="#">Services</a>
+        </div>
+        <div style="background-color: white;
+        margin-top: 13px;
+        width: 50px;
+        /* margin-top: 50; */
+        padding-top: 27px;
+        height: 150px;
+    " class="sub-menu">
+
+            <div class="icon-box">
+                <a href="{% url 'fitness'  %}">
+                <div class="icon"><i class="far fa-dumbbell"></i></div>
+                <div class="text">
+                    <div class="title">Entraînement <i class="far fa-arrow-right"></i></div>
+                    <div class="sub-text">Par Vidéos</div>
+                </div>
+                <div id="sub-menu-holder"></div>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="{% url 'conseil_med'  %}">
+                <div class="icon"><i class="far fa-heartbeat"></i></div>
+                <div class="text">
+                    <div class="title">Conseil médicale <i class="far fa-arrow-right"></i></div>
+                    <div class="sub-text">Par Médecins</div>
+                </div>
+            </a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="menu-item">
+        <div class="menu-text">
+            <a href="#">Boutique</a>
+        </div>
+        <div style="
+        background-color: white;
+        margin-top: 13px;
+        min-width: 18em;
+        /* margin-top: 50; */
+        padding-top: 27px;
+        height: 210px;
+        margin-left: 9%;
+    " class="sub-menu">
+
+            <div class="icon-box">
+                <div class="icon"><i class="far fa-pills"></i></div>
+                <div class="text">
+                    <div class="title">Protéines <i class="far fa-arrow-right"></i></div>
+
+                </div>
+                <div id="sub-menu-holder"></div>
+            </div>
+            <div class="icon-box">
+                <div class="icon"><i class="far fa-dumbbell"></i></div>
+                <div class="text">
+                    <div class="title">Matériels <i class="far fa-arrow-right"></i></div>
+
+                </div>
+            </div>
+            <div class="icon-box">
+                <div class="icon"><i class="far fa-tshirt"></i></div>
+                <div class="text">
+                    <div class="title">Vétements <i class="far fa-arrow-right"></i></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+   
+    
+    
+   
+    
+    <div class="menu-item-vide2">
+        <div style="    position: absolute;
+        right: 0;
+        margin-right: 50px;" class="menu-text">
+            <a  onclick="openNav()"  href="#"><i  style="margin-right: 30px;;font-size: 25px;" class="far fa-shopping-cart"></i> </a>
+         
+            {% if user.is_authenticated %} 
+            <a href="{% url 'profil' user.id %}">
+                <img style="margin-top: -14px;border: outset; border-radius: 50%;" width="32px" height="32px"  src="{% static 'images/prof.jpg' %}">
+              </a>
+              <a href="{% url 'logout'  %}">
+                 <i  style="font-size: 25px;margin-left: 20px;" class="fa fa-sign-out" aria-hidden="true"></i>
+                </a>   
+          {% else %}
+          <a href="{% url 'login'  %}">
+            <i  style="font-size: 25px;" class="fa fa-user-o" aria-hidden="true"></i>
+          </a>
+          {% endif %}
+        </div>
+        
+         
+    </div>
+
+</nav>
+<nav id="menu" style = "background-color: black; height :50px; width: 100.5%;">
+    <div class="menu-item-vide" style="margin-left: 370px;">
+      
+
+    </div>
+   
+  
+ 
+    <div class="menu-item-vide">
+        <div class="menu-text">
+            <a href="{% url 'profil' user.id %}">Infomations Personelles</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="menu-item-vide">
+    <div class="menu-text">
+        <a href="#">Historiques Commandes</a>
+    </div>
+
+</div>
+ 
+</nav>
+
+
+
+
+
+
