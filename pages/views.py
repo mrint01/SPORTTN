@@ -3,9 +3,10 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from pages.forms import UserForm
-from django.contrib.auth.decorators import login_required
-from .models import UserInfo
 from django.contrib.auth.models import User
+from .helpers import send_forget_password_mail
+from .models import UserInfo
+
 # Create your views here.
 
 def index(request):
@@ -20,7 +21,6 @@ def loginForm(request):
 
                         if user is not None:
                                 login(request, user)
-                                request.session['username'] = username
                                 return redirect('index')
                         else:
                                 messages.error(request, "L'identifiant ou le mot de passe est incorrect") 
@@ -38,8 +38,7 @@ def Register(request):
                         user = form.save()
                         user.set_password(user.password)
                         user.save()
-                        UserInfo.objects.create(user = user)
-                        messages.success(request, 'Merci pour votre inscription!')
+                        messages.success(request, 'Merci pour ton inscription!')
                         return redirect('login')
                 else:
                         print(form.errors)
@@ -51,32 +50,7 @@ def Register(request):
 
 def LogoutUser(request):
         logout(request)
-        return redirect('index')
+        return redirect('login')
 
 
-@login_required
-def profil(request, user_id):
-	#if request.method == 'POST':
-		#user_obj = User.objects.get(id=user_id)
-		#user_profile_obj = UserInfo.objects.get(id=user_id)
-		#user_profile_obj.save()
-		#user_profile_obj.refresh_from_db()
-		#return render(request, 'user_profil/profil.html', {'my_profile': user_profile_obj})
-	if (request.user.is_authenticated and request.user.id == user_id):
-		user_obj = User.objects.get(id=user_id)
-		#user_profile = UserInfo.objects.get(id=user_id)
-		return render(request, "user_profil/profil.html",{'my_profile': user_obj})
 
-
-@login_required
-def editprofil(request, id):
-    	#if request.method == 'POST':
-		#user_obj = User.objects.get(id=user_id)
-		#user_profile_obj = UserInfo.objects.get(id=user_id)
-		#user_profile_obj.save()
-		#user_profile_obj.refresh_from_db()
-		#return render(request, 'user_profil/profil.html', {'my_profile': user_profile_obj})
-	if (request.user.is_authenticated and request.user.id == id):
-		user_obj = User.objects.get(id=id)
-		#user_profile = UserInfo.objects.get(id=user_id)
-		return render(request, "user_profil/editprofil.html",{'my_edit_profile': user_obj})

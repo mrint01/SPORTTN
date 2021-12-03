@@ -24,7 +24,7 @@
 			{% for message in messages %}
 			<font color="red" size="4" >{{message}}</font>
 			{% endfor %}
-            <a href="#">Mot de passe oublié?</a>
+            <a href="{% url 'password_reset' %}">Mot de passe oublié?</a>
 		
 		<button type="submit">S'identifier</button>
 		</form>
