@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{%   static  'css/style2.css'  %}">
 
 
-<body bgcolor="white">
+
     <div class="div1">
 <div style="margin-top:-20px;right: 40%;position: absolute;">
 <img width= "80px" src="{% static 'images/run.png' %}" >
@@ -33,7 +33,7 @@
 <section style="height: 100%;width: 100%;">
     <div style="margin-top: 20px;margin-left: -8px;">
             <img style="
-      width:100.5%;
+      width:100%;
       height:100%;"src="{% static 'images/prod1.jpg'  %}" alt="">
        
     </div>
@@ -78,7 +78,7 @@
 
     <section style="margin-top: -20px;" >
         <div class="about-container">
-          <div style="margin-left: -10px;" class="row">
+          <div  class="row">
             <div  class="imgsize">
               <img style="
         width:100%;
@@ -117,97 +117,98 @@
         </div>
       </section>
 
-
-
-      <section class="sec2" >
-        <div class="about-container">
-          <div class="row">
-            
-            <div  class="txtbehindimg2" 
-           >
-    <p style="font-size: 10px;
-    font-family: MaisonNeue-Light;
-    font-weight: normal;
-    line-height: 10px;
-    margin-bottom: 8px;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;">  Nous avons tous les types de protéines</p>
-             
-              <h3 style="    font-family: Orbitron-Medium;
-              font-size: 28px;
-              margin-top: -7px;
-    line-height: 28px;
-    letter-spacing: 2.2px;
-    margin-bottom: 30px;">PROTEINES <br/></h3>
-              <p style="font-size: 12px;
-              font-family: MaisonNeue-Book;
-              font-weight: normal;
-              line-height: 20px;
-              letter-spacing: 0.2px;
-              text-transform: none;
-              margin-top: -15px;">Chaque joueur a besoin des meilleurs proteins </p>
-            
-            <button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button>
-        
-        
-        </div>
-        <div  style="position: absolute;right: 0;" class="imgsize2">
-            <img style="
-      width:100%;
-      height:90%;"src="{% static 'images/prod2.jpg'  %}" alt="">
-          </div>
-          </div>
       
-        </div>
-      </section>
-
-
-
-
-      
-<section class="sec4">
-    <div style="margin-top: 20px;margin-left: -8px;">
-            <img style="
-      width:100.5%;
-      height:100%;"src="{% static 'images/doctor.jpg'  %}" alt="">
+    <section class="seccc22">
+      <div class="about-container">
+        <div  class="row">
+          
+          <div  class="txtbehindimg2" 
+          >
+   <p style="font-size: 10px;
+   font-family: MaisonNeue-Light;
+   font-weight: normal;
+   line-height: 10px;
+   margin-bottom: 8px;
+   letter-spacing: 1.6px;
+   text-transform: uppercase;">  Nous avons tous les types de protéines</p>
+            
+             <h3 style="    font-family: Orbitron-Medium;
+             font-size: 28px;
+             margin-top: -7px;
+   line-height: 28px;
+   letter-spacing: 2.2px;
+   margin-bottom: 30px;">PROTEINES <br/></h3>
+             <p style="font-size: 12px;
+             font-family: MaisonNeue-Book;
+             font-weight: normal;
+             line-height: 20px;
+             letter-spacing: 0.2px;
+             text-transform: none;
+             margin-top: -15px;">Chaque joueur a besoin des meilleurs proteins </p>
+           
+           <a href="{% url 'product'  %}"><button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button></a>
        
-    </div>
-    <div  class="txtinsideimg" 
-           >
-    <p style="font-size: 10px;
-    font-family: MaisonNeue-Light;
-    font-weight: normal;
-    line-height: 10px;
-    margin-bottom: 8px;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    color: aliceblue;">NOUS AVONS LE MEILLEUR DOCTEUR</p>
-             
-              <h3 style="    font-family: Orbitron-Medium;
-              font-size: 28px;
-              margin-top: -7px;
-    line-height: 28px;
-    letter-spacing: 2.2px;
-    margin-bottom: 30px;
-    color: white;"> DEMANDEZ AU MEDECIN</h3>
-              <p style="font-size: 12px;
-              font-family: MaisonNeue-Book;
-              font-weight: normal;
-              line-height: 20px;
-              letter-spacing: 0.2px;
-              text-transform: none;
-              margin-top: -15px;
-              color: aliceblue;">Chaque joueur doit demander à un médecin une planification parfaite</p>
-            
-                <button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button>
-        
-             
-            
-        
+       
+       </div>
+       <div  class="imgsize2">
+           <img style="
+     width:100%;
+     height:90%;"src="{% static 'images/prod2.jpg'  %}" alt="">
+         </div>
+          
+
         </div>
-
     
+      </div>
+    </section>
 
-</section>
+    <section class="sec4">
+      <div >
+              <img class="imgdoc" src="{% static 'images/doctor.jpg'  %}" alt="">
+         
+      </div>
+      <div  class="txtinsideimg" 
+             >
+      <p style="font-size: 10px;
+      font-family: MaisonNeue-Light;
+      font-weight: normal;
+      line-height: 10px;
+      margin-bottom: 8px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: aliceblue;">NOUS AVONS LE MEILLEUR DOCTEUR</p>
+               
+                <h3 style="    font-family: Orbitron-Medium;
+                font-size: 28px;
+                margin-top: -7px;
+      line-height: 28px;
+      letter-spacing: 2.2px;
+      margin-bottom: 30px;
+      color: white;"> DEMANDEZ AU MEDECIN</h3>
+                <p style="font-size: 12px;
+                font-family: MaisonNeue-Book;
+                font-weight: normal;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                text-transform: none;
+                margin-top: -15px;
+                color: aliceblue;">Chaque joueur doit demander à un médecin une planification parfaite</p>
+              
+                  <button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button>
+          
+               
+              
+          
+          </div>
+  
+      
+  
+  </section>
 
+
+
+
+
+      
+</body>
     {%  endblock content  %}

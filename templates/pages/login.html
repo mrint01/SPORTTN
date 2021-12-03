@@ -17,14 +17,14 @@
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
-			<span>ou utilisez votre compte</span>
+			<span>ou utilisez votre compte khaled</span>
 			<input name="username" type="text"   placeholder="Nom d'utilisateur"/>
 			<input name="password" type="password"  placeholder="Mot de passe"/>
 		
 			{% for message in messages %}
 			<font color="red" size="4" >{{message}}</font>
 			{% endfor %}
-            <a href="#">Mot de passe oublié?</a>
+            <a href="{% url 'password_reset' %}">Mot de passe oublié?</a>
 		
 		<button type="submit">S'identifier</button>
 		</form>

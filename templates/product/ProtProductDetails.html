@@ -1,0 +1,387 @@
+{% extends  'Base2.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%  static 'css/productList.css' %}">
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<style>
+    .small-img-group{
+        display: flex;
+        justify-content: space-between;
+    }
+    .small-img-col{
+        flex-basis: 33%;
+        cursor: pointer;
+
+    }
+    .sproduct select {
+        display: block;
+        padding:  5px 10px;
+    }
+    .sproduct input {
+        width: 50px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .sproduct input:focus{
+        outline: none;
+    }
+    .buy-btn{
+        background-color: #fb774b;
+        opacity: 1;
+        transition: 0.3s;
+        border-width: 1;
+        border-radius: 7px;
+        height: 40px;
+        width: auto;
+    }
+    .buy-btn:hover{
+        background-color: #222;
+        transition: 0.6s ease;
+        color:wheat;
+    }
+    
+    .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pt-5, .py-5 {
+    padding-top: 3rem!important;
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+}
+.mt-5, .my-5 {
+    margin-top: 3rem!important;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.pb-1, .py-1 {
+    padding-bottom: .25rem!important;
+}
+.w-100 {
+    width: 100%!important;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem!important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+}
+.mt-5, .my-5 {
+    margin-top: 3rem!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+@media (min-width: 768px){
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}
+@media (min-width: 992px){
+.col-lg-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+.col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+
+</style>
+<style media="screen">
+    .carousel-cell {
+      width: 100%;
+      }
+  
+      /* cell number */
+      .carousel-cell:before {
+        display: block;
+      }
+    </style>
+<section class="container sproduct my-5 pt-5">
+    <div class="row mt-5">
+        <div class="col-lg-5 col-md-12 col-12">
+            <img class="img-fluid w-100 pb-1"  src="{{protdetails.imageP.url}}" alt="">
+            <!--<div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="{% static  'images/prod2.jpg' %}" class="small-img" width="100%"> 
+                </div>
+                <div class="small-img-col">
+                    <img src="{% static  'images/prod2.jpg' %}" class="small-img" width="100%"> 
+                </div>
+                <div class="small-img-col">
+                    <img src="{% static  'images/prod2.jpg' %}" class="small-img" width="100%"> 
+                </div>
+            </div> -->
+        
+        </div>
+        <div class="col-lg-6 col-md-12 col-12">
+            <h6>Boutique / Protéine</h6>
+            <h3 class="py-4">{{protdetails.nameP}}</h3>
+            <h2>{{protdetails.prixP}} DT</h2>
+          
+            <input  data-val="val" id="valeur" type="number" value="1">
+            <button data-product="{{protdetails.id}}"  data-action="add"  class="buy-btn update-cart">Ajouter au panier</button>
+
+            <h4 class="mt-5">Détails du produit</h4>
+            <span>{{protdetails.descP |safe }}</span>
+
+        </div>
+    </div> 
+
+</section>
+
+
+
+
+
+
+
+
+
+<br/><br/>
+<hr style="
+width: 50%;
+background: aliceblue;
+"><br/><br/>
+
+<style>
+    /* UTILITY */
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 2;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+main {
+
+    background-color: #f4f4f4;
+    padding: 4rem 0;
+    
+}
+
+.slide-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.arrow {
+    width: 2rem;
+    margin: 0 1rem;
+}
+
+section {
+    width: 100%;
+    /* height: 300px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* border: 1px solid black; */
+}
+
+section::-webkit-scrollbar {
+    height: 5px;
+    width: 2px;
+    border: 1px solid #d5d5d5;
+    background: #d5d5d5;
+}
+
+section::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+section::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    outline: 1px solid #eee;
+     /* border-radius: 100px; */
+  }
+
+section .thumbnail {
+    flex: 0 0 auto;
+	object-fit: cover;
+	cursor: pointer;
+	margin: 5px;
+    border: 1px solid var(--black);
+    overflow: hidden;
+    transform: scale(.95);
+    transition: all .3s;
+}
+
+section .thumbnail:hover {
+    transform: scale(1);
+}
+
+.product-details {
+    text-align: center;
+    padding-bottom: 1rem;
+    background-color: #fff;
+}
+
+
+
+.product-details p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: green;
+    font-weight: 700;
+}
+
+.product-details p span {
+    
+    color: blue;
+    font-weight: normal;
+}
+
+.product-details a {
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--color-sec);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+}
+
+.product-details a:hover {
+    background-color: var(--color-primary);
+}
+</style>
+<main>
+    <div class="slide-container">
+    <img id="slide-left" class="arrow" src="{% static 'images/arrow-left.png' %}">
+<section class="container" id="slider">
+    
+    {% for p in prot %}
+   
+    <div class="thumbnail">
+        <a href ="{% url 'productDetails'   p.pk%}" >
+        <div class="image-section">
+            <img src="{{p.imageP.url}}">
+        </div>
+    </a>
+        <div class="product-details">
+            <div class="description">
+                <h1>{{p.nameP}}</h1>
+                <p><b>Prix</b><span>{{p.prixP}}DT</span></p>
+            </div>
+        
+            <div class="button-group">
+                <button data-product="{{p.id}}"  data-action="add"  class="cart update-cart">Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+</section>
+<img id="slide-right" class="arrow" src="{% static 'images/arrow-right.png' %}">
+</div>
+</main>
+
+<script>
+    let thumbnails = document.getElementsByClassName('thumbnail');
+let slider = document.getElementById('slider');
+
+let buttonRight = document.getElementById('slide-right');
+let buttonLeft = document.getElementById('slide-left');
+
+buttonLeft.addEventListener('click', function(){
+    slider.scrollLeft -= 125;
+})
+
+buttonRight.addEventListener('click', function(){
+    slider.scrollLeft += 125;
+})
+
+const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+// alert(maxScrollLeft);
+// alert("Left Scroll:" + slider.scrollLeft);
+
+//AUTO PLAY THE SLIDER 
+function autoPlay() {
+    if (slider.scrollLeft > (maxScrollLeft - 1)) {
+        slider.scrollLeft -= maxScrollLeft;
+    } else {
+        slider.scrollLeft += 1;
+    }
+}
+let play = setInterval(autoPlay, 50);
+
+// PAUSE THE SLIDE ON HOVER
+for (var i=0; i < thumbnails.length; i++){
+
+thumbnails[i].addEventListener('mouseover', function() {
+    clearInterval(play);
+});
+
+thumbnails[i].addEventListener('mouseout', function() {
+    return play = setInterval(autoPlay, 50);
+});
+}
+</script>
+
+
+{%  endblock content  %}
