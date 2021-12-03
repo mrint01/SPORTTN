@@ -15,20 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
-from . import views
-
 #from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('pages.urls')),
-    path('produit/',include('products.urls')),
-    path('cart/',include('cart.urls')),
-
-    path("password_reset", views.password_reset_request, name="password_reset")
-
-
-
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    path('',include('learning.urls')),
+]
