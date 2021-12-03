@@ -1,0 +1,206 @@
+.about-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .seccc22{
+    margin-top: -130px;
+  }
+
+
+  .txtbehindimg{
+    margin-right: 20%;
+  margin-top: 190px;
+  
+  }
+  .txtbehindimg2{
+      margin-left: 120px;
+  margin-top: 190px;
+  
+  }
+  .txtinsideimg{
+      margin-left: 120px;
+  margin-top: -400px;
+  position: absolute;
+  }
+  .about-container > * {
+    width: 100%;
+  }
+  .imgsize{
+      width: 50%;
+  }
+  .imgsize2{
+      width: 50%;
+  }
+  .row {
+    display: flex;
+    margin: 20px 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+  .sec2{
+      margin-top: -149px;
+  }
+  .sec4{
+    margin-top: -5.6%;
+      height: 100%;
+      width: 100%;
+  }
+
+ .imgdoc{
+  width:100%;
+  height:100%;
+ }
+
+     @media (max-width: 1000px) {
+
+      .seccc22{
+        margin-top:  0px;
+      }
+      .imgdoc{
+        width:100%;
+        height: auto;
+       }
+      .sec4{
+      
+      height: auto;
+      width: 100%;
+  }
+      .txtbehindimg2 {
+        margin-left: 10px;
+        margin-top: 104px;
+        position: absolute;
+        color: white;
+}
+      .sec2{
+      margin-top: -20px;
+  }
+      .row{
+        
+      flex-direction: column;
+      }
+      .imgsize{
+      width: 100%;
+  }
+  .imgsize2{
+      width: 100%;
+  }
+  .txtbehindimg {
+  margin-left: 10px;
+  margin-top: -100px;
+}
+      }
+      
+
+      .button--hyperion22 {
+  font-family: input-mono-narrow, monospace;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: 1px solid #000;
+  overflow: hidden;
+  color: #fff;
+}
+
+.button--hyperion22 span {
+  display: block;
+  position: relative;
+}
+
+.button--hyperion22 > span {
+  overflow: hidden;
+}
+
+.button--hyperion22 > span > span {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.button--hyperion22:hover > span > span {
+  animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+@keyframes MoveUpInitial {
+  to {
+      transform: translate3d(0,-105%,0);
+  }
+}
+
+@keyframes MoveUpEnd {
+  from {
+      transform: translate3d(0,100%,0);
+  }
+  to {
+      transform: translate3d(0,0,0);
+  }
+}
+
+.button--hyperion22::before {
+  content: '';
+  
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transform-origin: 100% 50%;
+}
+
+.button--hyperion22:hover::before {
+  transform: scale3d(0,1,1);
+  transform-origin: 0% 50%;
+}
+
+
+
+.button--hyperion {
+  font-family: input-mono-narrow, monospace;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: 1px solid #000;
+  overflow: hidden;
+  color: #fff;
+}
+
+.button--hyperion span {
+  display: block;
+  position: relative;
+}
+
+.button--hyperion > span {
+  overflow: hidden;
+}
+
+.button--hyperion > span > span {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.button--hyperion:hover > span > span {
+  animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+@keyframes MoveUpInitial {
+  to {
+      transform: translate3d(0,-105%,0);
+  }
+}
+
+@keyframes MoveUpEnd {
+  from {
+      transform: translate3d(0,100%,0);
+  }
+  to {
+      transform: translate3d(0,0,0);
+  }
+}
+
+.button--hyperion::before {
+  content: '';
+  background: #000;
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transform-origin: 100% 50%;
+}
+
+.button--hyperion:hover::before {
+  transform: scale3d(0,1,1);
+  transform-origin: 0% 50%;
+}

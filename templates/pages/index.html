@@ -1,0 +1,214 @@
+{% extends  'Base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%   static  'css/buttoncss.css'  %}">
+<link rel="stylesheet" href="{%   static  'css/style2.css'  %}">
+
+
+
+    <div class="div1">
+<div style="margin-top:-20px;right: 40%;position: absolute;">
+<img width= "80px" src="{% static 'images/run.png' %}" >
+<div style="padding-top: 20px;;">
+    <b>SPORT.TN</b>
+    <br/><br/>
+        
+    </div>
+
+    
+</div>
+
+<div style="margin-top:120px;font-family: cursive;">
+<p>&nbsp;&nbsp; &nbsp; Le meilleur site Web pour acheter des produits de fitness et apprendre à s'entraîner avec les meilleurs des meilleurs entraîneurs</font>
+</div>
+<button style="width: 80%;margin-left: 10%;" class="button button--pandora"><span>S'entrainer maintenant</span></button>
+
+    </div>
+
+    <div style="font-size: 20px;text-align: center;margin-top: 50px;font-family: MaisonNeue-Demi;">
+        <font color="black" ><b>ÉQUIPEMENT RECOMMANDÉ</b> </font>
+    </div>
+
+
+<section style="height: 100%;width: 100%;">
+    <div style="margin-top: 20px;margin-left: -8px;">
+            <img style="
+      width:100%;
+      height:100%;"src="{% static 'images/prod1.jpg'  %}" alt="">
+       
+    </div>
+
+    <div  class="txtinsideimg" 
+           >
+    <p style="font-size: 10px;
+    font-family: MaisonNeue-Light;
+    font-weight: normal;
+    line-height: 10px;
+    margin-bottom: 8px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: aliceblue;">L'ÉQUIPEMENT AUTOMNE HIVER 2021 EST ARRIVÉ</p>
+             
+              <h3 style="    font-family: Orbitron-Medium;
+              font-size: 28px;
+              margin-top: -7px;
+    line-height: 28px;
+    letter-spacing: 2.2px;
+    margin-bottom: 30px;
+    color: white;"> NOUVELLES ARRIVÉES</h3>
+              <p style="font-size: 12px;
+              font-family: MaisonNeue-Book;
+              font-weight: normal;
+              line-height: 20px;
+              letter-spacing: 0.2px;
+              text-transform: none;
+              margin-top: -15px;
+              color: aliceblue;">Chaque joueur a besoin des meilleurs vêtements de musculation</p>
+            
+            <div class="row">
+                <button class="button button--hyperion"><span><span>BOUTIQUE HOMME</span></span></button>
+        
+                <button  style="margin-left: 10px; "class="button button--hyperion22"><span><span>BOUTIQUE FEMME</span></span></button>
+        
+            </div>
+        
+        </div>
+
+</section>
+
+    <section style="margin-top: -20px;" >
+        <div class="about-container">
+          <div  class="row">
+            <div  class="imgsize">
+              <img style="
+        width:100%;
+        height:90%;"src="{% static 'images/prod4.jpg'  %}" alt="">
+            </div>
+            <div  class="txtbehindimg" 
+           >
+    <p style="font-size: 10px;
+    font-family: MaisonNeue-Light;
+    font-weight: normal;
+    line-height: 10px;
+    margin-bottom: 8px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;"> MATERIEL DE 2021 EST ARRIVÉ</p>
+             
+              <h3 style="    font-family: Orbitron-Medium;
+              font-size: 28px;
+              margin-top: -7px;
+    line-height: 28px;
+    letter-spacing: 2.2px;
+    margin-bottom: 30px;">MATERIEL DE <br/>MUSCULATION <br/></h3>
+              <p style="font-size: 12px;
+              font-family: MaisonNeue-Book;
+              font-weight: normal;
+              line-height: 20px;
+              letter-spacing: 0.2px;
+              text-transform: none;
+              margin-top: -15px;">Chaque joueur a besoin des matériels  de musculation</p>
+            
+            <button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button>
+        
+        
+        </div>
+          </div>
+      
+        </div>
+      </section>
+
+      
+    <section class="seccc22">
+      <div class="about-container">
+        <div  class="row">
+          
+          <div  class="txtbehindimg2" 
+          >
+   <p style="font-size: 10px;
+   font-family: MaisonNeue-Light;
+   font-weight: normal;
+   line-height: 10px;
+   margin-bottom: 8px;
+   letter-spacing: 1.6px;
+   text-transform: uppercase;">  Nous avons tous les types de protéines</p>
+            
+             <h3 style="    font-family: Orbitron-Medium;
+             font-size: 28px;
+             margin-top: -7px;
+   line-height: 28px;
+   letter-spacing: 2.2px;
+   margin-bottom: 30px;">PROTEINES <br/></h3>
+             <p style="font-size: 12px;
+             font-family: MaisonNeue-Book;
+             font-weight: normal;
+             line-height: 20px;
+             letter-spacing: 0.2px;
+             text-transform: none;
+             margin-top: -15px;">Chaque joueur a besoin des meilleurs proteins </p>
+           
+           <a href="{% url 'product'  %}"><button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button></a>
+       
+       
+       </div>
+       <div  class="imgsize2">
+           <img style="
+     width:100%;
+     height:90%;"src="{% static 'images/prod2.jpg'  %}" alt="">
+         </div>
+          
+
+        </div>
+    
+      </div>
+    </section>
+
+    <section class="sec4">
+      <div >
+              <img class="imgdoc" src="{% static 'images/doctor.jpg'  %}" alt="">
+         
+      </div>
+      <div  class="txtinsideimg" 
+             >
+      <p style="font-size: 10px;
+      font-family: MaisonNeue-Light;
+      font-weight: normal;
+      line-height: 10px;
+      margin-bottom: 8px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: aliceblue;">NOUS AVONS LE MEILLEUR DOCTEUR</p>
+               
+                <h3 style="    font-family: Orbitron-Medium;
+                font-size: 28px;
+                margin-top: -7px;
+      line-height: 28px;
+      letter-spacing: 2.2px;
+      margin-bottom: 30px;
+      color: white;"> DEMANDEZ AU MEDECIN</h3>
+                <p style="font-size: 12px;
+                font-family: MaisonNeue-Book;
+                font-weight: normal;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                text-transform: none;
+                margin-top: -15px;
+                color: aliceblue;">Chaque joueur doit demander à un médecin une planification parfaite</p>
+              
+                  <button class="button button--hyperion"><span><span>DÉCOUVRIR PLUS</span></span></button>
+          
+               
+              
+          
+          </div>
+  
+      
+  
+  </section>
+
+
+
+
+
+      
+</body>
+    {%  endblock content  %}

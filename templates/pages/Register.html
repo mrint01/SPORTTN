@@ -1,0 +1,67 @@
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%   static  'css/login.css'  %}">
+<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="" method="POST">
+            {% csrf_token %}
+			<h1>Créer un compte</h1>		
+			<span>ou utilisez votre email pour vous inscrire</span>
+
+            
+            {{form.first_name}}
+            {{form.last_name}}
+            {{form.username}}
+            {{form.email}}
+            {{form.password}}
+    
+            {%  if form.errors  %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        {{error | escape}}
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.nom_field_errors  %}
+                    {{error | escape}}
+                {% endfor %}
+            {% endif %}
+
+			<button  type="submit" >S'inscrire</button>
+		</form>
+	</div>
+	
+	<div class="overlay-container">
+		<div class="overlay">
+			
+			<div class="overlay-panel overlay-right">
+				<h1>Salut l'ami !</h1>
+				<p>Entrez vos données personnelles et commencez votre voyage avec nous</p>
+				<button class="ghost" id="signUp">S'inscrire</button>
+			</div>
+            <div class="overlay-panel overlay-left">
+				<h1>Content de te revoir !</h1>
+				<p>Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles</p>
+				<a href="{% url 'login'  %}"><button class="ghost" id="signIn">S'identifier</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script >
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+container.classList.add("right-panel-active");
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+{%  endblock content  %}
